@@ -1,0 +1,172 @@
+# Epidemiological Model
+
+This project provides a simulation of an epidemiological model, allowing users to study the dynamics of infectious diseases within a population.
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Example](#example)
+- [License](#license)
+- [Author](#Author)
+
+## Introduction
+
+The Epidemiological Model simulation is a Python-based tool designed to simulate and study the spread of infectious diseases within a population. The primary objective is to provide researchers, epidemiologists, and students with a flexible and customizable platform to explore the dynamics of epidemics.
+
+### Problem to Solve
+
+In the context of the COVID-19 pandemic and other infectious diseases, understanding the factors influencing the spread of a virus is crucial for effective public health planning. This simulation model addresses the following key questions:
+
+1. **Infection Dynamics:** How does the infection spread within a population over time, considering factors like the infection rate and recovery rate?
+
+2. **Population Impact:** What is the impact of different infection rates on the susceptible, infected, and recovered populations?
+
+
+### Features
+
+- Stochastic simulation of an epidemiological model with customizable parameters.
+- Visualization of the dynamics over time, including the susceptible, infected, and recovered populations.
+- Analysis of the impact of different infection rates, recovery rates, and intervention strategies on the simulated population.
+
+By utilizing this simulation tool, users can gain insights into the complex dynamics of infectious diseases, aiding in the development of informed public health strategies and interventions.
+
+## Other Features
+
+1. **Stochastic Epidemiological Simulation:** Implement a stochastic epidemiological model that simulates the spread of infectious diseases within a population.
+
+2. **Population Compartments:** Structure the population into compartments (Susceptible, Infected, Recovered) to capture different states of individuals during the simulation.
+
+3. **User-Configurable Parameters:** Allow users to configure simulation parameters, including the total population (`N`), infection rate per interaction (`beta`), recovery rate (`sigma`), initial infected individuals, duration of simulaiton time step (`dt`), and the number of simulation time steps (`sim_ts`).
+
+4. **Discrete Stochastic Model:** Convert the deterministic model to a discrete stochastic model using the binomial distribution, providing a more realistic representation of random events in the simulation.
+
+5. **Simulation Results:** Output simulation results as a 2D NumPy array, capturing the dynamics of the model over time.
+
+6. **Visualization:** Include a function for visualizing the epidemiological dynamics over time, allowing users to plot the changes in the susceptible, infected, and recovered populations.
+
+7. **Project Structuring:** Organize the project in a modular and scalable manner, making it easy for future development and collaboration.
+
+8. **Testing:** Implement tests to ensure the correctness and reliability of the simulation and visualization functions.
+
+9. **User-Friendly:** Design the project with user-friendliness in mind, enabling researchers to run simulations with ease and flexibility.
+
+10. **Documentation:** Provide documentation, including README file, code comments, usage examples and instructions for running simulations, to assist in understanding and utilizing the project.
+
+
+## Getting Started
+
+To get started with the epidemiological model simulation, follow these steps:
+
+### Prerequisites
+
+Before running the simulation, make sure you have the following installed:
+
+- [Python](https://www.python.org/) (>=3.6)
+- [NumPy](https://numpy.org/)
+- [Matplotlib](https://matplotlib.org/)
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/babak2/epidemiological_model.git
+
+Navigate to the project directory:
+
+`cd epidemiological-model`
+
+## Usage
+
+
+Run the simulation with the default parameters:
+
+```python3 scripts/run_simulation.py```
+
+
+Optional Parameters:
+
+    --N: Total population size (default: 1000)
+    --beta: Infection rate per interaction (default: 10)
+    --sigma: Recovery rate (default: 1)
+    --init_infect: Initial infected individuals (default: 10)
+    --dt: Duration of simulaiton time step for simulation (default: 0.01)
+    --sim_ts: Number of simulation time steps (default: 500)
+
+Adjust these parameters based on your research requirements.
+
+## Example
+
+You can customize the simulation parameters by providing command-line arguments:
+
+  `python3 scripts/run_simulation.py --N 40000 --beta 9 --sigma 1 --init_infect 10 --dt 0.01 --sim_ts 500`
+  
+
+## Running Tests
+
+Run the tests using the following command:
+
+python3 -m unittest discover -s tests -p "*test_*.py"
+
+  -s tests: This tells the test discovery process to start looking for tests in the tests directory.
+  -p "*test_*.py": This specifies that it should discover files that match the pattern *test_*.py (files whose names include "test_" and end with ".py").
+
+
+To run a specific test file, use:
+
+`python3 -m unittest tests.test_filename`
+
+Replace filename with the actual filename of the test module.
+
+To run a specific test function within a test file, use:
+
+`python3 -m unittest tests.test_filename.TestClassName.test_function_name`
+
+Replace filename, TestClassName, and test_function_name with the actual filename, class name, and test function name, respectively.
+
+## Tests examples
+
+Execute `test_simulation.py`
+
+```python3 -m unittest tests/test_simulation.py ```
+
+Execute `test_simulation_with_initial_infections` function inside `test_simulation.py` 
+
+``` python3 -m unittest tests.test_simulation.TestSimulationFunctions.test_simulation_with_initial_infections ```
+
+## Visualizing Results
+
+The simulation results will be saved as a visualization plot in the output directory. You can find the generated plot with a filename similar to f_N40000_beta9.0_sigma1_initial10_dt0.01_ts500.png.
+
+![model output visualization](./images/output.png)
+
+#### File Naming Convention:
+
+- `f_`: Prefix indicating it's a simulation file output.
+- `N40000`: Total population size used in the simulation (N followed by its value).
+- `beta9.0`: Infection rate per interaction used in the simulation (beta followed by rate value).
+- `sigma1`: Recovery rate used in the simulation (sigma followed by rate value).
+- `initial10`: Initial infected individuals used in the simulation (initial followed by its value)
+- `dt0.01`: Duratio of used simulation time step (dt followed by its value).
+- `ts500`: Number of time steps used in the simulatio (ts followed by its value).
+
+This naming convention provides a clear representation of the simulation parameters used to generate the corresponding plot. Adjustments to parameters will result in different filenames, making it easy to organize and identify simulations.
+
+If a file `filename.png` already exists, the script will save the new file with a unique postfix, like `filename_1.png`, and continue incrementing the number for each subsequent run.
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
+## Author 
+
+Babak Mahdavi Ardestani
+
+babak.m.ardestani@gmail.com
