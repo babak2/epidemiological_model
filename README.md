@@ -11,6 +11,7 @@ This project provides a simulation of an epidemiological model, allowing users t
   - [Installation](#installation)
 - [Usage](#usage)
 - [Example](#example)
+- [Continuous Integration and Deployment (CI/CD)](#continuous-integration-and-deployment-cicd)
 - [License](#license)
 - [Author](#Author)
 
@@ -158,6 +159,41 @@ The simulation results will be saved as a visualization plot in the output direc
 This naming convention provides a clear representation of the simulation parameters used to generate the corresponding plot. Adjustments to parameters will result in different filenames, making it easy to organize and identify simulations.
 
 If a file `filename.png` already exists, the script will save the new file with a unique postfix, like `filename_1.png`, and continue incrementing the number for each subsequent run.
+
+
+## Continuous Integration and Deployment (CI/CD)
+
+This project includes a CI/CD pipeline using GitHub Actions to automate the testing and deployment processes. The pipeline is triggered whenever changes are pushed to the master branch or a pull request is opened.
+
+### CI/CD Workflow
+
+The CI/CD workflow consists of two main jobs:
+
+1. **Build Job:** This job runs on every push to the master branch or pull request. It performs the following tasks:
+   - Checks out the repository.
+   - Sets up the Python environment.
+   - Installs project dependencies.
+   - Runs tests to ensure the correctness and reliability of the simulation and visualization functions.
+
+2. **Deploy Job:** This job runs on the completion of the Build job. It performs the following tasks:
+   - Checks out the repository.
+   - Sets up the Python environment.
+   - Installs project dependencies.
+   - Deploys the simulation with specific parameters, simulating the spread of infectious diseases with a defined configuration.
+
+### Triggering the CI/CD Pipeline
+
+The CI/CD pipeline is automatically triggered in the following scenarios:
+- On every push to the master branch.
+- When a pull request is opened.
+
+### Monitoring CI/CD Status
+
+You can monitor the status of the CI/CD pipeline by checking the GitHub Actions tab in the repository. Successful runs are indicated with a green checkmark, while failures are marked with a red 'X'.
+
+### Modifying the CI/CD Workflow
+
+You can modify the CI/CD workflow by updating the `.github/workflows/ci-cd.yml` file. Adjustments can be made to the jobs, steps, and conditions based on your specific requirements.
 
 
 ## License
