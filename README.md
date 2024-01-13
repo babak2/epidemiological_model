@@ -105,10 +105,15 @@ If both Python 2 and 3 are both installed, it's important to specify Python 3 us
 Optional Parameters:
 
   `--N`: Total population size (default: 1000)
+
   `--beta`: Infection rate per interaction (default: 10)
+
   `--sigma`: Recovery rate (default: 1)
+
   `--init_infect`: Initial infected individuals (default: 10)
+
   `--dt`: Duration of simulaiton time step for simulation (default: 0.01)
+
   `--sim_ts`: Number of simulation time steps (default: 500)
 
 Adjust these parameters based on your research requirements.
@@ -161,7 +166,7 @@ Note: use `python` instead of `python3` if Python 3 is the only Python version i
 
 The simulation results will be saved as a visualization plot in the output directory. You can find the generated plot with a filename similar to f_N40000_beta9.0_sigma1_initial10_dt0.01_ts500.png.
 
-![model output visualization](./images/output.png)
+<img src="./images/output.png" alt="model output visualization" width="400"/>
 
 #### File Naming Convention:
 
