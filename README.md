@@ -18,7 +18,7 @@ This project provides a simulation of an epidemiological model, allowing users t
   - [Running the Docker Container](#running-the-docker-container)
   - [Interacting with the Container](#interacting-with-the-container)
   - [Additional Commands](#additional-commands)
--[License](#license)
+- [License](#license)
 - [Author](#Author)
 
 ## Introduction
@@ -79,10 +79,11 @@ Before running the simulation, make sure you have the following installed:
 
 ### Installation
 
-1. Clone the repository:
+Clone the repository:
 
-   ```bash
-   git clone https://github.com/babak2/epidemiological_model.git
+```bash
+  git clone https://github.com/babak2/epidemiological_model.git
+```
 
 Navigate to the project directory:
 
