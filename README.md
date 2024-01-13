@@ -82,20 +82,26 @@ Before running the simulation, make sure you have the following installed:
 Clone the repository:
 
 ```bash
-  git clone https://github.com/babak2/epidemiological_model.git
+git clone https://github.com/babak2/epidemiological_model.git
 ```
 
 Navigate to the project directory:
 
-`cd epidemiological-model`
+```bash
+cd epidemiological-model`
+```
 
 ## Usage
 
-
 Run the simulation with the default parameters:
 
-```python3 scripts/run_simulation.py```
+If Python 3 is the only Python version installed on your machine, you can use the python command. For example:
 
+```python scripts/run_simulation.py```
+
+If both Python 2 and 3 are both installed, it's important to specify Python 3 using the python3 command. For example:
+
+```python3 scripts/run_simulation.py```
 
 Optional Parameters:
 
@@ -114,6 +120,7 @@ You can customize the simulation parameters by providing command-line arguments:
 
   `python3 scripts/run_simulation.py --N 40000 --beta 9 --sigma 1 --init_infect 10 --dt 0.01 --sim_ts 500`
   
+Use `python` if Python 3 is the only Python version installed on your machine.
 
 ## Running Tests
 
@@ -224,7 +231,9 @@ docker run --name epi-model-container epi-model-image
 
 If you encounter a naming conflict, remove the existing container first:
 
-`docker rm epi-model-container`
+```bash
+docker rm epi-model-container
+```
 
 Then, run the container again.
 
@@ -232,22 +241,29 @@ Then, run the container again.
 
 Open a Shell in the Container
 
-`docker exec -it epi-model-container /bin/bash`
+```bash
+docker exec -it epi-model-container /bin/bash
+```
 
 ### Additional Commands
 
 View Container Logs
 
-`docker logs epi-model-container`
+```bash
+docker logs epi-model-container
+```
 
 Remove Container
 
-`docker rm epi-model-container`
+```bash
+docker rm epi-model-container
+```
 
 Remove Image
 
-`docker rmi epi-model-image`
-
+```bash
+docker rmi epi-model-image
+```
 
 ## License
 
