@@ -166,7 +166,7 @@ Note: use `python` instead of `python3` if Python 3 is the only Python version i
 
 The simulation results will be saved as a visualization plot in the output directory. You can find the generated plot with a filename similar to f_N40000_beta9.0_sigma1_initial10_dt0.01_ts500.png.
 
-<img src="./images/output.png" alt="model output visualization" width="400"/>
+<img src="./images/output.png" alt="model output visualization" width="500"/>
 
 #### File Naming Convention:
 
