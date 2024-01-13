@@ -12,7 +12,13 @@ This project provides a simulation of an epidemiological model, allowing users t
 - [Usage](#usage)
 - [Example](#example)
 - [Continuous Integration and Deployment (CI/CD)](#continuous-integration-and-deployment-cicd)
-- [License](#license)
+- [Docker](#docker)
+  - [Prerequisites](#prerequisites)
+  - [Building the Docker Image](#building-the-docker-image)
+  - [Running the Docker Container](#running-the-docker-container)
+  - [Interacting with the Container](#interacting-with-the-container)
+  - [Additional Commands](#additional-commands)
+-[License](#license)
 - [Author](#Author)
 
 ## Introduction
@@ -194,6 +200,52 @@ You can monitor the status of the CI/CD pipeline by checking the GitHub Actions 
 ### Modifying the CI/CD Workflow
 
 You can modify the CI/CD workflow by updating the `.github/workflows/ci-cd.yml` file. Adjustments can be made to the jobs, steps, and conditions based on your specific requirements.
+
+## Docker
+
+**Prerequisites**
+
+- Ensure that Docker is installed on your system. You can download and install Docker from https://www.docker.com/get-started.
+
+
+### Building the Docker Image
+
+Build the Docker Image
+
+```bash
+docker build -t epi-model-image .
+```
+
+### Running the Docker Container
+```bash
+docker run --name epi-model-container epi-model-image
+```
+
+If you encounter a naming conflict, remove the existing container first:
+
+`docker rm epi-model-container`
+
+Then, run the container again.
+
+### Interacting with the Container
+
+Open a Shell in the Container
+
+`docker exec -it epi-model-container /bin/bash`
+
+### Additional Commands
+
+View Container Logs
+
+`docker logs epi-model-container`
+
+Remove Container
+
+`docker rm epi-model-container`
+
+Remove Image
+
+`docker rmi epi-model-image`
 
 
 ## License
