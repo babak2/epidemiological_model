@@ -13,11 +13,10 @@ This project provides a simulation of an epidemiological model, allowing users t
 - [Example](#example)
 - [Continuous Integration and Deployment (CI/CD)](#continuous-integration-and-deployment-cicd)
 - [Docker](#docker)
-  - [Prerequisites](#prerequisites)
   - [Building the Docker Image](#building-the-docker-image)
   - [Running the Docker Container](#running-the-docker-container)
   - [Interacting with the Container](#interacting-with-the-container)
-  - [Additional Commands](#additional-commands)
+  - [Additional Docker Commands](#additional-docker-commands)
 - [License](#license)
 - [Author](#Author)
 
@@ -120,7 +119,7 @@ You can customize the simulation parameters by providing command-line arguments:
 
   `python3 scripts/run_simulation.py --N 40000 --beta 9 --sigma 1 --init_infect 10 --dt 0.01 --sim_ts 500`
   
-Use `python` if Python 3 is the only Python version installed on your machine.
+Note: use `python` instead of `python3` if Python 3 is the only Python version installed on your machine.
 
 ## Running Tests
 
@@ -144,6 +143,8 @@ To run a specific test function within a test file, use:
 
 Replace filename, TestClassName, and test_function_name with the actual filename, class name, and test function name, respectively.
 
+Note: use `python` instead of `python3` if Python 3 is the only Python version installed on your machine.
+
 ## Tests examples
 
 Execute `test_simulation.py`
@@ -153,6 +154,8 @@ Execute `test_simulation.py`
 Execute `test_simulation_with_initial_infections` function inside `test_simulation.py` 
 
 ``` python3 -m unittest tests.test_simulation.TestSimulationFunctions.test_simulation_with_initial_infections ```
+
+Note: use `python` instead of `python3` if Python 3 is the only Python version installed on your machine.
 
 ## Visualizing Results
 
