@@ -104,12 +104,12 @@ If both Python 2 and 3 are both installed, it's important to specify Python 3 us
 
 Optional Parameters:
 
-    --N: Total population size (default: 1000)
-    --beta: Infection rate per interaction (default: 10)
-    --sigma: Recovery rate (default: 1)
-    --init_infect: Initial infected individuals (default: 10)
-    --dt: Duration of simulaiton time step for simulation (default: 0.01)
-    --sim_ts: Number of simulation time steps (default: 500)
+  `--N`: Total population size (default: 1000)
+  `--beta`: Infection rate per interaction (default: 10)
+  `--sigma`: Recovery rate (default: 1)
+  `--init_infect`: Initial infected individuals (default: 10)
+  `--dt`: Duration of simulaiton time step for simulation (default: 0.01)
+  `--sim_ts`: Number of simulation time steps (default: 500)
 
 Adjust these parameters based on your research requirements.
 
@@ -248,7 +248,7 @@ Open a Shell in the Container
 docker exec -it epi-model-container /bin/bash
 ```
 
-### Additional Commands
+### Additional Docker Commands
 
 View Container Logs
 
