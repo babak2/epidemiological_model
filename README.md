@@ -133,7 +133,7 @@ Run the tests using the following command:
 python3 -m unittest discover -s tests -p "*test_*.py"
 
   -s tests: This tells the test discovery process to start looking for tests in the tests directory.
-  
+
   -p "*test_*.py": This specifies that it should discover files that match the pattern *test_*.py (files whose names include "test_" and end with ".py").
 
 
@@ -153,11 +153,11 @@ Note: use `python` instead of `python3` if Python 3 is the only Python version i
 
 ## Tests examples
 
-Execute `test_simulation.py`
+To execute the test suite in `test_simulation.py`, run:
 
-```python3 -m unittest tests/test_simulation.py ```
+```python3 -m unittest tests.test_simulation```
 
-Execute `test_simulation_with_initial_infections` function inside `test_simulation.py` 
+To execute the `test_simulation_with_initial_infections` function inside `test_simulation.py`, run the following command from the project's root directory:
 
 ``` python3 -m unittest tests.test_simulation.TestSimulationFunctions.test_simulation_with_initial_infections ```
 
