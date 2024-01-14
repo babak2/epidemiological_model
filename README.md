@@ -130,11 +130,12 @@ Note: use `python` instead of `python3` if Python 3 is the only Python version i
 
 Run the tests using the following command:
 
-python3 -m unittest discover -s tests -p "*test_*.py"
+`python3 -m unittest discover -s tests -p "*test_*.py"`
 
-  -s tests: This tells the test discovery process to start looking for tests in the tests directory.
-
-  -p "*test_*.py": This specifies that it should discover files that match the pattern *test_*.py (files whose names include "test_" and end with ".py").
+  `-s tests`: This tells the test discovery process to start looking for tests in the `tests` directory as the root.
+ 
+ 
+  `-p "*test_*.py"`: This specifies that it should discover files that match the pattern `*test_*.py` (files whose names include "test_" and end with ".py").
 
 
 To run a specific test file, use:
