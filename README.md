@@ -78,6 +78,24 @@ Before running the simulation, make sure you have the following installed:
 
 ### Installation
 
+#### Option 1: Install via pip
+
+Ensure that you have Python (>=3.6) installed on your system.
+
+If Python 3 is the only Python version installed on your machine, you can use the `pip` command. For example:
+
+```bash
+pip install epidemiological-model
+```
+
+If both Python 2 and 3 are both installed, it's important to specify Python 3 using the `pip3` command. For example:
+
+```bash
+pip3 install epidemiological-model
+```
+
+#### Option 2: Clone the repository
+
 Clone the repository:
 
 ```bash
@@ -94,11 +112,11 @@ cd epidemiological-model`
 
 Run the simulation with the default parameters:
 
-If Python 3 is the only Python version installed on your machine, you can use the python command. For example:
+If Python 3 is the only Python version installed on your machine, you can use the `python` command. For example:
 
 ```python scripts/run_simulation.py```
 
-If both Python 2 and 3 are both installed, it's important to specify Python 3 using the python3 command. For example:
+If both Python 2 and 3 are both installed, it's important to specify Python 3 using the `python3` command. For example:
 
 ```python3 scripts/run_simulation.py```
 
