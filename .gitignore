@@ -9,6 +9,11 @@ venv/
 env/
 *.env/
 
+# build-related directories and files
+dist/
+build/
+*.egg-info/
+
 # IDE specific files
 .vscode/
 .idea/
@@ -23,3 +28,5 @@ __pycache__/
 
 # macOS
 .DS_Store
+
+
