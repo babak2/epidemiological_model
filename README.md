@@ -22,7 +22,7 @@ This project provides a simulation of an epidemiological model, allowing users t
 
 ## Introduction
 
-The Epidemiological Model simulation is a Python-based tool designed to simulate and study the spread of infectious diseases within a population. The primary objective is to provide researchers, epidemiologists, and students with a flexible and customizable platform to explore the dynamics of epidemics.
+The Epidemiological Model is a Python-based tool designed to simulate and study the spread of infectious diseases within a population. The primary objective is to provide researchers, epidemiologists, and students with a flexible and customizable platform to explore the dynamics of epidemics.
 
 ### Problem to Solve
 
@@ -47,7 +47,7 @@ By utilizing this simulation tool, users can gain insights into the complex dyna
 
 2. **Population Compartments:** Structure the population into compartments (Susceptible, Infected, Recovered) to capture different states of individuals during the simulation.
 
-3. **User-Configurable Parameters:** Allow users to configure simulation parameters, including the total population (`N`), infection rate per interaction (`beta`), recovery rate (`sigma`), initial infected individuals, duration of simulaiton time step (`dt`), and the number of simulation time steps (`sim_ts`).
+3. **User-Configurable Parameters:** Allow users to configure simulation parameters, including the total population (`N`), infection rate per interaction (`beta`), recovery rate (`sigma`), initial infected individuals, duration of simulation time step (`dt`), and the number of simulation time steps (`sim_ts`).
 
 4. **Discrete Stochastic Model:** Convert the deterministic model to a discrete stochastic model using the binomial distribution, providing a more realistic representation of random events in the simulation.
 
@@ -130,7 +130,7 @@ Optional Parameters:
 
   `--init_infect`: Initial infected individuals (default: 10)
 
-  `--dt`: Duration of simulaiton time step for simulation (default: 0.01)
+  `--dt`: Duration of the simulation time step for simulation (default: 0.01)
 
   `--sim_ts`: Number of simulation time steps (default: 500)
 
@@ -160,7 +160,7 @@ To run a specific test file, use:
 
 `python3 -m unittest tests.test_filename`
 
-Replace filename with the actual filename of the test module.
+Replace the filename with the actual filename of the test module.
 
 To run a specific test function within a test file, use:
 
@@ -195,7 +195,7 @@ The simulation results will be saved as a visualization plot in the output direc
 - `beta9.0`: Infection rate per interaction used in the simulation (beta followed by rate value).
 - `sigma1`: Recovery rate used in the simulation (sigma followed by rate value).
 - `initial10`: Initial infected individuals used in the simulation (initial followed by its value)
-- `dt0.01`: Duratio of used simulation time step (dt followed by its value).
+- `dt0.01`: Duration of used simulation time step (dt followed by its value).
 - `ts500`: Number of time steps used in the simulatio (ts followed by its value).
 
 This naming convention provides a clear representation of the simulation parameters used to generate the corresponding plot. Adjustments to parameters will result in different filenames, making it easy to organize and identify simulations.
@@ -212,13 +212,13 @@ This project includes a CI/CD pipeline using GitHub Actions to automate the test
 The CI/CD workflow consists of two main jobs:
 
 1. **Build Job:** This job runs on every push to the master branch or pull request. It performs the following tasks:
-   - Checks out the repository.
+   - Check out the repository.
    - Sets up the Python environment.
    - Installs project dependencies.
    - Runs tests to ensure the correctness and reliability of the simulation and visualization functions.
 
 2. **Deploy Job:** This job runs on the completion of the Build job. It performs the following tasks:
-   - Checks out the repository.
+   - Check out the repository.
    - Sets up the Python environment.
    - Installs project dependencies.
    - Deploys the simulation with specific parameters, simulating the spread of infectious diseases with a defined configuration.
